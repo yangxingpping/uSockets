@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+PROJECT(uSockets)
+include_directories(src)
+AUX_SOURCE_DIRECTORY(./src/ DIR_SRCS)
+AUX_SOURCE_DIRECTORY(./src/eventing/ DIR_SRCS)
+ADD_LIBRARY(uSockets SHARED ${DIR_SRCS})
